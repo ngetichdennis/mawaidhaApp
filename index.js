@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 const adviceText = document.getElementById("motivation-text");
+const getAdvice=document.getElementById("getAdvice-btn");
   // Function to fetch random advice from the API
 async function fetchRandomAdvice(){
     try{
@@ -35,6 +36,8 @@ async function updateDB(likes, comments) {
         console.error('Error updating db.json:', error);
     }
 }
+ // Event listener for the "Get Advice" button
+getAdvice.addEventListener('click', fetchRandomAdvice);
 
 
 });
