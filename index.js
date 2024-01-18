@@ -25,8 +25,8 @@ async function fetchDataFromDB() {
   // Function to update likes and comments in db.json using POST
 async function updateDB(likes) {
     try {
-        await fetch('DB.json', {
-                    method: 'PATCH',
+        await fetch('  http://localhost:3000/likes', {
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
@@ -42,14 +42,12 @@ getAdvice.addEventListener('click', fetchRandomAdvice);
  // Event listener for the "Like" button
  likeBtn.addEventListener('click', async function () {
     const data = await fetchDataFromDB();
-    const updatedLikes =data.likes +1;
+    const updatedLikes =(data.likes? data.likes :0)+1;
     likeBtn.innerText =(`likes  (${updatedLikes})`);
 
     console.log('Advice Liked!');
    // Update DB.json
     updateDB(updatedLikes);
-
-
 });
 
 // Initializing fetch for advice
