@@ -37,6 +37,7 @@ body{
   font-size: 20px;
   font-style: italic;
   margin-bottom: 20px;
+
 }
 /* Style the buttons */
 button {
@@ -47,6 +48,28 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Style the get advice button */
+#getAdvice-btn {
+  background-color:black;
+  color: white;
+}
+
+/* Style the like button */
+#like-btn {
+  background-color:black;
+  color:#f0f0f0 ;
+}
+/* Style the generator footer */
+.generatorFooter {
+  background-color:black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
 
 
 
