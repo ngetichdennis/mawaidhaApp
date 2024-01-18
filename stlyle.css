@@ -32,4 +32,22 @@ body{
   padding: 20px;
   text-align: center;
 }
+/* Style the motivation text */
+#motivation-text {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+/* Style the buttons */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
 
