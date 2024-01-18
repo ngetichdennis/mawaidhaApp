@@ -20,5 +20,21 @@ async function fetchDataFromDB() {
         console.error('Error fetching data from db.json:', error);
     }
 }
+  // Function to update likes and comments in db.json using POST
+async function updateDB(likes, comments) {
+    try {
+        await fetch('db.json', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept':'application/json',
+            },
+            body: JSON.stringify({ likes, comments }),
+        });
+    } catch (error) {
+        console.error('Error updating db.json:', error);
+    }
+}
+
 
 });
