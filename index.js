@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 const adviceText = document.getElementById("motivation-text");
 const getAdvice=document.getElementById("getAdvice-btn");
+const likeBtn=document.getElementById("like-btn")
   // Function to fetch random advice from the API
 async function fetchRandomAdvice(){
     try{
-        const response=await fetch("https://api.adviceslip.com/advice");
-        const data=await response.json();
+        const response = await fetch("https://api.adviceslip.com/advice");
+        const data = await response.json();
         adviceText.innerText=data.slip.advice;
     } catch (error){
         console.error("Error fetching advice:", error);
@@ -14,7 +15,7 @@ async function fetchRandomAdvice(){
   // Function to fetch data from db.json
 async function fetchDataFromDB() {
     try {
-        const response = await fetch('db.json');
+        const response = await fetch('DB.json');
         const data = await response.json();
         return data;
     } catch (error) {
@@ -24,11 +25,11 @@ async function fetchDataFromDB() {
   // Function to update likes and comments in db.json using POST
 async function updateDB(likes, comments) {
     try {
-        await fetch('db.json', {
+        await fetch('DB.json', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Accept':'application/json',
+                
             },
             body: JSON.stringify({ likes, comments }),
         });
@@ -36,8 +37,19 @@ async function updateDB(likes, comments) {
         console.error('Error updating db.json:', error);
     }
 }
- // Event listener for the "Get Advice" button
+ // Event listener for the "get Advice" button
 getAdvice.addEventListener('click', fetchRandomAdvice);
+
+ // Event listener for the "Like" button
+ likeBtn.addEventListener('click', async function () {
+    const data = await fetchDataFromDB();
+    const updatedLikes = data.likes+1;
+    const comments = data.comments; 
+    likeBtn.innerText =like(` ${updatedLikes}`);
+
+    console.log('Advice Liked!');
+});
+
 
 
 });
