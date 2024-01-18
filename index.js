@@ -10,4 +10,15 @@ async function fetchRandomAdvice(){
         console.error("Error fetching advice:", error);
     }
 }
+  // Function to fetch data from db.json
+async function fetchDataFromDB() {
+    try {
+        const response = await fetch('db.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data from db.json:', error);
+    }
+}
+
 });
