@@ -1,4 +1,16 @@
 {
-    "likes": 0,
-    "comments": []
-  }
+  "likes": [
+    {
+      "likes": "1",
+      "id": 1
+    },
+    {
+      "likes": "[object Object]1",
+      "id": 2
+    },
+    {
+      "likes": "[object Object],[object Object]1",
+      "id": 3
+    }
+  ]
+}
