@@ -8,3 +8,10 @@ body {
     height: 100vh;
 }
 
+.generatorBody {
+    width: 400px;
+}
+
+#like-btn {
+    margin-left: 10px;
+}
