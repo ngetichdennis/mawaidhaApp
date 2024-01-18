@@ -1,17 +1,27 @@
-body {
-    background-color: lightblue;
+/*styling the body*/
+body{
+  background-color: lightblue;
 }
+
+/* Style the app container */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background-color: #f0f0f0;
 }
-
+/* Style the generator body */
 .generatorBody {
-    width: 400px;
+  padding: 20px;
 }
 
-#like-btn {
-    margin-left: 10px;
+/* Style the generator container */
+.generatorContainer {
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #333;
+  border-radius: 10px;
+ 
 }
+
