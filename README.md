@@ -13,6 +13,9 @@ The application relies on fetching data from the public API for it to display th
 ## Limitation.
 -The application depends on an external API that might not be reliable or available at all times. If the API fails or changes, your web app will not work properly. 
 -The application uses a local JSON file to store the number of likes, which means that it will not persist across different devices or sessions
+## my project management tool
+here is the link to my trello
+https://trello.com/b/1au8wxJJ/mawaidhaapp
 ## Contribution
 Contribution is welcomed for any review on any part of the SPA.
 ## Conclusion.
